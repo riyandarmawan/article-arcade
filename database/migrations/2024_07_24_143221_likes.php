@@ -16,6 +16,9 @@ return new class extends Migration
             $table->integer('article_id');
             $table->integer('user_id');
             $table->timestamp('created_at')->useCurrent();
+
+            $table->foreign('article_id')->references('id')->on('articles');
+            $table->foreign('user_id')->references('id')->on('users');
         });
     }
 

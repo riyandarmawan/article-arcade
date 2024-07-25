@@ -6,6 +6,7 @@ namespace App\Models;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class User extends Authenticatable
@@ -47,8 +48,21 @@ class User extends Authenticatable
         ];
     }
 
+    // role
     public function role(): BelongsTo
     {
         return $this->belongsTo(Role::class);
+    }
+
+    // likes
+    public function likes(): BelongsToMany
+    {
+        return $this->belongsToMany(Article::class, 'likes');
+    }
+
+    // comments
+    public function comments(): BelongsToMany
+    {
+        return $this->belongsToMany(Article::class, 'comments');
     }
 }

@@ -19,6 +19,9 @@ return new class extends Migration
             $table->integer('user_id');
             $table->integer('categorY_id');
             $table->timestamps();
+
+            $table->foreign('user_id')->references('id')->on('users');
+            $table->foreign('category_id')->references('id')->on('categories');
         });
     }
 
