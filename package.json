@@ -4,7 +4,7 @@
     "scripts": {
         "dev": "vite",
         "build": "vite build",
-	"start": "concurrently \"php artisan serve\" \"pnpm run dev\""
+        "start": "concurrently \"php artisan serve\" \"pnpm run dev\""
     },
     "devDependencies": {
         "@vitejs/plugin-react": "^4.3.1",

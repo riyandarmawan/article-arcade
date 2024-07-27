@@ -1,10 +1,5 @@
-import { Head } from "@inertiajs/react";
-import About from "@/About/Index";
+import Layout from "@components/Layout";
 
 export default function Home() {
-    return (
-        <>
-            <About />
-        </>
-    );
+    return <Layout></Layout>;
 }

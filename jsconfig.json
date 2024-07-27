@@ -2,6 +2,7 @@
     "compilerOptions": {
         "paths": {
             "@/*": ["./resources/js/Pages/*"],
+            "@components/*": ["./resources/js/Components/*"],
             "@css/*": ["./resources/css/*"]
         }
     }

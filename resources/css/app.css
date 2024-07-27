@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+    @apply font-body bg-secondary;
+}
+
+.cta {
+    @apply rounded-full px-4 py-2 text-base font-medium md:text-lg lg:text-xl 2xl:text-2xl;
+}
+
+.underline-animation {
+    @apply after:absolute after:left-0 after:top-full after:h-[2px] after:w-0 after:bg-primary after:duration-300 hover:after:left-0 hover:after:right-auto hover:after:w-full;
+}
