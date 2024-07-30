@@ -9,10 +9,10 @@ export default function Header() {
     function handleAppear() {
         setAppear(!appear);
     }
-    
+
     return (
         <header>
-            <div className="container">
+            <div className="container absolute left-1/2 -translate-x-1/2">
                 <div className="relative flex items-center justify-between border-b-2 border-primary py-4 sm:px-4">
                     <div className="flex items-center gap-3">
                         <HamburgerMenu handleAppear={handleAppear} />
